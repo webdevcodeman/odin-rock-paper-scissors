@@ -1,18 +1,9 @@
 "use strict";
 function getComputerChoice(){
-  let randomNumber=Math.floor(Math.random()*10);
+  let randomNumber=Math.floor(Math.random()*(9-1+1))+1;
   // console.log(randomNumber);
   // console.log(Math.floor(randomNumber));
-  if(randomNumber===0){
-    randomNumber=getComputerChoice();
-    if(randomNumber>=1 && randomNumber<=3){
-      return "rock";
-    }else if(randomNumber>=4 && randomNumber<=6){
-      return "paper";
-    }else{
-      return "scissors";
-    }
-  }else if(randomNumber>=1 && randomNumber<=3){
+  if(randomNumber>=1 && randomNumber<=3){
     return "rock";
   }else if(randomNumber>=4 && randomNumber<=6){
     return "paper";
